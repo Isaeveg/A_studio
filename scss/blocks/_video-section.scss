@@ -1,0 +1,77 @@
+.video-section {
+  margin-top: 146rem;
+  display: flex;
+
+  @include tablet {
+    display: grid;
+    justify-content: center;
+    margin-top: 120rem;
+  }
+
+  &__video {
+    margin-right: 119rem;
+    position: relative;
+
+    @include tablet {
+      margin-right: 0;
+      margin-bottom: 50rem;
+    }
+
+    img {
+      position: relative;
+      cursor: pointer;
+    }
+
+    &::before {
+      right: -41rem;
+      bottom: -64rem;
+      position: absolute;
+      content: "";
+      display: block;
+      width: 129rem;
+      height: 129rem;
+      border-radius: 50%;
+      background: $semiOrange;
+
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+  &__info {
+    margin-top: auto;
+    margin-bottom: auto;
+    @include tablet {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    color: $black;
+    font-size: 40rem;
+    font-weight: 700;
+    max-width: 468rem;
+
+    @include tablet {
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 391rem;
+      padding-bottom: 25rem;
+      text-align: center;
+    }
+  }
+
+  &__desc {
+    color: $darkGrey;
+    font-size: 16rem;
+    font-weight: 400;
+    line-height: 160%;
+    max-width: 532rem;
+
+    @include tablet {
+      margin-right: auto;
+      margin-left: auto;
+      text-align: center;
+    }
+  }
+}

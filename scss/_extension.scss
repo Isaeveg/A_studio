@@ -1,0 +1,15 @@
+%hover-img {
+  transition: 0.4s all ease-in-out;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+%hover-a {
+  transition: 0.3s all ease-in-out;
+
+  &:hover {
+    color: #f52648;
+  }
+}

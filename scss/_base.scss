@@ -1,0 +1,30 @@
+html {
+  font-size: 1px;
+
+  @include tablet {
+    font-size: 0.95px;
+  }
+
+  @include tablet-small {
+    font-size: 0.9px;
+  }
+
+  @include mobile {
+    font-size: 0.85px;
+  }
+}
+
+body {
+  font-family: $ff-main;
+  @include tablet {
+    .active {
+      overflow: hidden;
+    }
+  }
+}
+
+.container {
+  max-width: $container + 30px;
+  margin-inline: auto;
+  padding: 0 30px;
+}

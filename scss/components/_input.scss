@@ -1,0 +1,23 @@
+form {
+  width: 100%;
+}
+
+input {
+  font-family: $ff-main;
+  background: $white;
+  max-width: 190rem;
+  width: 100%;
+  padding: 10rem 0;
+  outline: 0;
+  border: 0;
+}
+
+input[type="text"] {
+  color: #959595;
+  font-size: 16rem;
+  font-weight: 400;
+
+  @include mobile {
+    text-align: center;
+  }
+}

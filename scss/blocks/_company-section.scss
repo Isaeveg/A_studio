@@ -1,0 +1,87 @@
+.company-section {
+  display: flex;
+  margin-bottom: 125rem;
+
+  @include desktop-small {
+    justify-content: center;
+  }
+
+  @include tablet {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 50rem;
+  }
+
+  @include mobile {
+    display: block;
+    margin-bottom: 50rem;
+  }
+
+  &__info {
+    margin-right: 60rem;
+
+    @include tablet {
+      margin-right: 0;
+    }
+
+    @include mobile {
+      margin-right: 0;
+      margin-bottom: 40rem;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    color: $black;
+    font-size: 40rem;
+    font-weight: 700;
+    margin-bottom: 17rem;
+  }
+
+  &__desc {
+    color: $mediumGrey;
+    font-size: 18rem;
+    font-weight: 400;
+    line-height: 160%;
+    max-width: 336rem;
+
+    @include tablet {
+      max-width: none;
+      margin-bottom: 50px;
+    }
+
+    @include mobile {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  &__logo {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 60rem;
+    align-items: start;
+
+    @include desktop-small {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 50rem;
+      grid-row-gap: 50rem;
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__image {
+    cursor: pointer;
+    @extend %hover-img;
+
+    @include mobile {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

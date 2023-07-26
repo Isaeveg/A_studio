@@ -1,0 +1,136 @@
+.header {
+  padding: 30rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70rem;
+  position: relative;
+  z-index: 2;
+
+  @include tablet {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #f8f8f8;
+  }
+
+  &__logo {
+    width: 120rem;
+    height: 34rem;
+    @include tablet {
+      z-index: 5;
+    }
+  }
+
+  &__ul {
+    display: flex;
+    align-items: center;
+    gap: 24rem;
+
+    @include tablet {
+      height: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+
+  }
+
+  &__li {
+    @include tablet {
+      margin: 0 0 20rem 0;
+      text-align: center;
+    }
+  }
+
+  &__a {
+    color: $black;
+    font-family: $ff-main;
+    font-size: 16rem;
+    font-weight: 400;
+    letter-spacing: 0.16rem;
+    @extend %hover-a;
+
+    @include tablet {
+      color: $black;
+      font-size: 30rem;
+    }
+  }
+  &__burger {
+    display: none;
+
+    @include tablet {
+      display: block;
+      width: 30rem;
+      height: 20rem;
+      position: relative;
+      margin-right: 30rem;
+    }
+  }
+
+  &__nav {
+    z-index: 5;
+    transition: $transition;
+    @include tablet {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      overflow: auto;
+      width: 65%;
+      height: 100%;
+      padding: 70rem 10rem 20rem 10rem;
+      background: $blue;
+      opacity: 0.9;
+      flex-direction: column;
+      z-index: 5;
+    }
+  }
+}
+
+.header__burger::before,
+.header__burger::after {
+  content: "";
+  background-color: black;
+  position: absolute;
+  width: 100%;
+  height: 2rem;
+  left: 0;
+  z-index: 5;
+  transition: $transition;
+}
+.header__burger:before {
+  top: 0;
+}
+.header__burger:after {
+  bottom: 0;
+}
+.burger__span {
+  background-color: black;
+  position: absolute;
+  height: 2rem;
+  left: 0;
+  top: 9rem;
+  width: 100%;
+  z-index: 5;
+  transition: $transition;
+}
+
+.header__burger.active::before {
+  transform: rotate(45deg);
+  top: 9rem;
+}
+
+.header__burger.active::after {
+  transform: rotate(-45deg);
+  bottom: 9rem;
+}
+
+.header__burger.active span{
+  transform: scale(0);
+}
+
+.header__nav.active{
+  left: 0;
+}

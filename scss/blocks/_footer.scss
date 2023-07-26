@@ -1,0 +1,121 @@
+.footer {
+  &__block {
+    padding-top: 60rem;
+    border-top: 1rem solid #e4e4e4;
+    margin-top: 146rem;
+    display: flex;
+    padding-bottom: 10rem;
+
+    @include desktop-small {
+      justify-content: center;
+      text-align: center;
+    }
+
+    @include tablet {
+      flex-direction: column-reverse;
+      gap: 30rem;
+      margin-top: 40rem;
+    }
+  }
+
+  &__desc {
+    max-width: 270rem;
+    margin-right: 191rem;
+
+    @include desktop-small {
+      margin-right: 65rem;
+    }
+
+    @include tablet {
+      margin-right: 0;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 26rem;
+    max-width: 106rem;
+  }
+
+  &__about {
+    color: $darkGrey;
+    font-size: 14rem;
+    font-weight: 400;
+    line-height: 160%;
+    margin-bottom: 40rem;
+  }
+
+  &__a {
+    padding-right: 16rem;
+
+    img {
+      @extend %hover-img;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  &__info {
+    display: flex;
+    gap: 100rem;
+
+    @include desktop-small {
+      gap: 40rem;
+    }
+
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      justify-content: center;
+      gap: 20rem;
+
+    }
+
+    @include mobile {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+    }
+  }
+
+  &__list {
+    display: grid;
+
+    @include tablet {
+      text-align: center;
+    }
+  }
+
+  &__title {
+    padding-bottom: 24rem;
+    color: $black;
+    font-size: 20rem;
+    font-weight: 700;
+
+    @include tablet {
+      text-align: center;
+    }
+  }
+
+  &__title-a {
+    color: $black;
+    font-size: 14rem;
+    font-weight: 400;
+    line-height: 200%;
+    @extend %hover-a;
+  }
+
+  &__copyright {
+    border-top: 1rem solid #f1f1f1;
+    padding-top: 17rem;
+    padding-bottom: 22rem;
+    margin-top: 29rem;
+    color: #a4a4a4;
+    font-size: 14rem;
+    font-weight: 400;
+    text-align: center;
+  }
+}

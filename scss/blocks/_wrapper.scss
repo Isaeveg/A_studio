@@ -1,0 +1,25 @@
+.wrapper {
+  display: none;
+
+  @include tablet {
+    display: block;
+    text-align: center;
+  }
+  overflow: hidden;
+
+  .image-slider__image {
+    text-align: center;
+    img {
+      @include tablet {
+        width: 30%;
+      }
+      @include mobile {
+        width: 40%;
+      }
+    }
+  }
+}
+
+.swiper-wrapper {
+  height: 100%;
+}

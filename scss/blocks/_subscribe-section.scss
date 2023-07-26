@@ -1,0 +1,73 @@
+.subscribe-section {
+  display: flex;
+  margin-top: 280rem;
+  justify-content: center;
+  align-items: center;
+  gap: 38rem;
+
+  max-width: 1250rem;
+  border-radius: 75rem;
+  background: #f4f9ff;
+  padding: 99rem 92rem;
+
+  @include desktop-small {
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    margin-top: 120rem;
+    gap: 15rem;
+  }
+
+  @include tablet-small {
+    margin-top: 75rem;
+    padding: 20rem 40rem;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 479rem;
+    width: 100%;
+    border-radius: 60rem;
+    border: 1rem solid #f1f1f1;
+    background: $white;
+    box-shadow: 10rem 20rem 50rem 0rem rgba(0, 0, 0, 0.15);
+    padding: 10rem 10rem 10rem 34rem;
+
+    @include mobile {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .btn {
+    font-size: 16rem;
+    max-width: 188rem;
+    width: 100%;
+    white-space: nowrap;
+  }
+
+  &__title {
+    color: $black;
+    font-size: 40rem;
+    font-weight: 700;
+    margin-bottom: 17rem;
+    @include tablet-small {
+      text-align: center;
+    }
+  }
+  &__desc {
+    color: $mediumGrey;
+    font-size: 18rem;
+    font-weight: 400;
+
+    @include tablet-small {
+      text-align: center;
+    }
+  }
+}
